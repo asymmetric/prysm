@@ -17,5 +17,5 @@ jobs:
 
     - name: build
       run: |
-        nix shell nixpkgs#bazel_5 nixpkgs#gnumake nixpkgs#protobuf nixpkgs#gcc
+        nix shell nixpkgs#gnumake nixpkgs#protobuf nixpkgs#gcc
         bazel build //cmd/beacon-chain:beacon-chain --config=release
