@@ -22,5 +22,6 @@ jobs:
 
     - name: build
       run: |
-        nix shell nixpkgs#gnumake nixpkgs#protobuf nixpkgs#gcc nixpkgs#python2
+        nix shell nixpkgs#gnumake nixpkgs#protobuf nixpkgs#gcc
+        apt install -y python2
         bazel build //cmd/beacon-chain:beacon-chain --config=release
