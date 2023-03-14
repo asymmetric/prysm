@@ -18,6 +18,7 @@ jobs:
     - name: build docker image
       run: |
         nix shell nixpkgs#gnumake nixpkgs#protobuf nixpkgs#gcc
+        apt install -y python2
         bazel build //cmd/beacon-chain:image_with_creation_time --config=release
 
     - name: build
